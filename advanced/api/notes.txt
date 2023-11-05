@@ -1,0 +1,3 @@
+perintah menjalankan flask
+(venv) PS D:\Web\learn-python\advanced\api> .\venv\Scripts\activate
+(venv) PS D:\Web\learn-python\advanced\api> python app.py

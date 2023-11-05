@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="productTitle"></h1>
+    <p id="productDescription"></p>
+    <p id="productPrice"></p>
+    <p id="productRating"></p>
+    <img id="productThumbnail" src="" alt="Product Image">
+
+    <script>
+        fetch('https://dummyjson.com/products/1')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('productTitle').textContent = data.title;
+                document.getElementById('productDescription').textContent = data.description;
+                document.getElementById('productPrice').textContent = 'Price: $' + data.price;
+                document.getElementById('productRating').textContent = 'Rating: ' + data.rating;
+                document.getElementById('productThumbnail').src = data.thumbnail;
+            });
+    </script>
+</body>
+
+</html>
